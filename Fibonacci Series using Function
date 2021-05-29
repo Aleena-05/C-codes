@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+
+int fib(int num)
+{
+    int i,next,first=0,second=1;
+    for(i=0;i<=num;i++)
+    {
+        if(i<=1)
+        {
+           next=i;
+        }
+        else{
+            next=first+second;
+            first=second;
+            second=next;
+        }
+        cout<<next<<endl;
+    }
+    return 0;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    fib(n);
+    return 0;
+}
