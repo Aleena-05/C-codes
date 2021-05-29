@@ -1,0 +1,25 @@
+#include <iostream>
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int i, x,y,j,l=1;
+    cout<<"enter: ";
+    cin>>x>>y;
+    j=(x>y)? x:y;
+    i=j;
+
+    while(1)
+    {
+        if(i%x==0 && i%y==0)
+        {
+            l=i;
+            break;
+        }
+        i+=j;
+    }
+    cout<<"lcm is: "<<l;
+    return 0;
+}
