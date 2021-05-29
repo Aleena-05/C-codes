@@ -1,0 +1,26 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    int num,first=0,second=1,next,p;
+    cout<<"enter: ";
+    cin>>num;
+    for(p=0;p<num;p++)
+    {
+        if(p<=1)
+        {
+            next=p;
+        }
+        else
+        {
+            next=first+second;
+            first=second;
+            second=next;
+        }
+        cout<<next<<"\n";
+    }
+    return 0;
+}
+
