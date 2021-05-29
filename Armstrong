@@ -1,0 +1,33 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    int num,temp,len1=0,rem,result=0;
+    cout<<"enter: ";
+    cin>>num;
+    temp=num;
+    while(temp!=0)
+    {
+        rem=temp%10;
+        len1++;
+        temp=temp/10;
+    }
+    cout<<len1<<"\n";
+    temp=num;
+    while(temp!=0)
+    {
+        rem=temp%10;
+        result=result+pow(rem,len1);
+        temp=temp/10;
+    }
+    if(result==num)
+    {
+        cout<<"yes its an armstrong number.";
+    }
+    else
+    {
+        cout<<"no its not an armstrong number.";
+    }
+    return 0;
