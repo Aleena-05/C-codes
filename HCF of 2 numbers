@@ -1,0 +1,23 @@
+#include <iostream>
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int i, x,y,j,f=1;
+    cout<<"enter: ";
+    cin>>x>>y;
+    j=(x<y)? x:y;
+
+    for(i=1;i<=j;i++)
+    {
+        if(x%i==0 && y%i==0)
+        {
+            f=i;
+        }
+    }
+    cout<<"hcf is: "<<f;
+    return 0;
+
+}
