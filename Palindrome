@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num,cop,rev=0,dig;
+    cout<<"enter: ";
+    cin>>num;
+    cop=num;
+    while(cop!=0)
+    {
+        dig=cop%10;
+        rev=(rev*10)+dig;
+        cop=cop/10;
+    }
+    if(rev==num)
+    {
+        cout<<"yes, its a palindrome";
+    }
+    else
+    {
+        cout<<"no, its not a palindrome";
+    }
+    return 0;
+}
