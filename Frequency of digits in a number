@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+     int num,freq[10],lastdig,i,len=0;
+     cout<<"enter: ";
+     cin>>num;
+    for(i=0; i<10; i++)
+    {
+        freq[i] = 0;
+    }
+    while(num!=0)
+     {
+         lastdig=num%10;
+         num=num/10;
+         len++;
+         freq[lastdig]++;
+     }
+     cout<<len<<endl;
+     for(i=0;i<10;i++)
+     {
+         cout<<i<<":"<<freq[i]<<endl;
+     }
+     return 0;
+ }
