@@ -1,0 +1,24 @@
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+int convert(long num)
+{
+    int rem,sum=0;
+    for(int i=0;num!=0;i++)
+    {
+        rem=num%10;
+        sum+=(rem*pow(2,i));
+        num/=10;
+    }
+    return sum;
+}
+
+int main()
+{
+   long num;
+   cin>>num;
+   cout<<convert(num);
+   return 0;
+}
