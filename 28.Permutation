@@ -1,0 +1,23 @@
+#include <iostream>
+#include<math.h>
+#include<stack>
+
+using namespace std;
+
+int fact(int x)
+{
+    int f=1;
+    for(int i=1;i<=x;i++)
+    {
+        f*=i;
+    }
+    return f;
+}
+int main()
+{
+   int n,r;
+   cin>>n>>r;
+   cout<<(fact(r)/fact(r-n));
+   return 0;
+}
+
