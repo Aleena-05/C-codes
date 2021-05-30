@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+int fact(int num)
+{
+    int factorial,i;
+    
+    if(num<0){
+        cout<<"Invalid";
+    }
+    else if(num==0 || num==1)
+    {
+       factorial =1;
+    }
+    else{
+        factorial=1;
+        for(i=2;i<=num;i++){
+            factorial*=i;
+        }
+    }
+    cout<<factorial;
+}
+int main()
+{
+   int num;
+   cin>>num;
+   fact(num);
+   
+   return 0;
+}
