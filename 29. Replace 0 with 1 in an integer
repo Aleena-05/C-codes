@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   int num,rem,n=0;
+   cin>>num;
+   while(num!=0)
+   {
+       rem=num%10;
+       if(rem==0)
+       {
+           rem=1;
+       }
+       num/=10;
+       n=n*10+rem;
+       
+   }
+   cout<<n;
+   
+   return 0;
+}
