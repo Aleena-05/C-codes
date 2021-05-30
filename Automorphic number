@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int automorphic(int num)
+{
+    int copy=num;
+    int flag=0;
+    int sq=(num*num);
+    for(int i=0;num!=0;i++)
+    {
+        if(num%10!=sq%10)
+        {
+            flag=1;
+            break;
+        }
+        else
+        {
+            num/=10;
+            sq/=10;
+        }
+    }
+    
+    if(flag==1)
+    {
+        cout<<"not";
+    }
+    else
+    {
+        cout<<"yes";
+    }
+}
+int main()
+{
+   int num;
+   cin>>num;
+   automorphic(num);
+   return 0;
+}
