@@ -1,0 +1,38 @@
+#include <iostream>
+#include<math.h>
+#include<stack>
+
+using namespace std;
+
+void octal(int binary)
+{
+    int dec=0,rem,remain;
+    stack<int> s;
+    
+    for(int i=0;binary!=0;i++)
+    {
+        
+        rem=binary%10;
+        dec+=(rem*pow(2,i));
+        binary/=10;
+    }
+    for(int i=0;dec!=0;i++)
+    {
+        remain=dec%8;
+        dec/=8;
+        s.push(remain);
+    }
+    while(!s.empty())
+    {
+        cout<<" "<<s.top();
+        s.pop();
+    }
+}
+int main()
+{
+   int binary;
+   cin>>binary;
+   octal(binary);
+   
+   return 0;
+}
