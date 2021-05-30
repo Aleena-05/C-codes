@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int abundant(int num)
+{
+    int copy=num;
+    int sum=0;
+    for(int i=1;i<num;i++)
+    {
+        if(num%i==0)
+        {
+            sum+=i;
+        }
+    }
+    
+    if(sum>=copy)
+    {
+        cout<<"yes";
+    }
+    else
+    {
+        cout<<"no";
+    }
+}
+int main()
+{
+   int num;
+   cin>>num;
+   abundant(num);
+   return 0;
+}
